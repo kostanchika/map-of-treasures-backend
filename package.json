@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "preinstall": "only-allow pnpm && copy .env.dist .env && pnpm i -g nodemon",
+    "preinstall": "only-allow pnpm && cp .env.dist .env && pnpm i -g nodemon",
     "postinstall": "pnpm dev:up && pnpm prisma:migrate:apply && pnpm dev:down",
     "prisma:migrate:new": "prisma migrate dev --create-only",
     "prisma:migrate:apply": "prisma migrate dev",
